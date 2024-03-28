@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Endpoints</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .endpoint {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .endpoint h2 {
+        margin-top: 0;
+      }
+      .endpoint p {
+        margin-bottom: 5px;
+      }
+      .endpoint .method {
+        font-weight: bold;
+      }
+      .endpoint .path {
+        font-style: italic;
+      }
+      .endpoint .description {
+        margin-top: 5px;
+      }
+      .request-body {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+      }
+      .request-body h3 {
+        margin-top: 0;
+      }
+      .request-body ul {
+        padding-left: 20px;
+        list-style-type: square;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>API Endpoints</h1>
+      <div class="endpoint">
+        <h2>POST /task</h2>
+        <p class="method">Method: <span class="method">POST</span></p>
+        <p class="path">Path: <span class="path">/task</span></p>
+        <p class="description">Creates a new task.</p>
+        <div class="request-body">
+          <h3>Request Body</h3>
+          <p>The request body should include the following key:</p>
+          <ul>
+            <li>name: The name of the task</li>
+            <li>description: The description of the task</li>
+            <li>status: The status of the task</li>
+          </ul>
+        </div>
+      </div>
+      <div class="endpoint">
+        <h2>GET /tasks</h2>
+        <p class="method">Method: <span class="method">GET</span></p>
+        <p class="path">Path: <span class="path">/tasks</span></p>
+        <p class="description">Gets all record</p>
+      </div>
+
+      <div class="endpoint">
+        <h2>GET /tasks/filter?status=all&sort=desc&limit=10&skip=0</h2>
+        <p class="method">Method: <span class="method">GET</span></p>
+        <p class="path">
+          Path:
+          <span class="path"
+            >/tasks/filter?status=all&sort=desc&limit=10&skip=0</span
+          >
+        </p>
+        <p class="description">Gets record with pagination</p>
+      </div>
+
+      <div class="endpoint">
+        <h2>GET /task/:id</h2>
+        <p class="method">Method: <span class="method">GET</span></p>
+        <p class="path">Path: <span class="path">/task/:id</span></p>
+        <p class="description">Returns requested record</p>
+      </div>
+
+      <div class="endpoint">
+        <h2>PUT /task/:id</h2>
+        <p class="method">Method: <span class="method">PUT</span></p>
+        <p class="path">Path: <span class="path">/task/:id</span></p>
+        <p class="description">Returns the updated record</p>
+        <div class="request-body">
+          <h3>Request Body</h3>
+          <p>The request body should include the following key:</p>
+          <ul>
+            <li>name: The name of the task</li>
+          </ul>
+        </div>
+      </div>
+      <div class="endpoint">
+        <h2>DELETE /task/:id</h2>
+        <p class="method">Method: <span class="method">DELETE</span></p>
+        <p class="path">Path: <span class="path">/task/:id</span></p>
+        <p class="description">Returns deleted record</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "task-management",
+  "version": "1.0.0",
+  "description": "A simple task-management CRUD REST API application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --env-file .env app.js",
+    "dev": "nodemon --env-file .env app.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "cors": "*",
+    "express": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "jest": "*",
+    "dotenv": "*",
+    "nodemon": "*",
+    "supertest": "*"
+  },
+  "license": "MIT",
+  "author": "Devbrat"
+}
